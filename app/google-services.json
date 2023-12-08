@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "623780167829",
+    "project_id": "urbanm-52c35",
+    "storage_bucket": "urbanm-52c35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623780167829:android:5e7c232ad9783352d69b9c",
+        "android_client_info": {
+          "package_name": "com.example.urbanmarket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4rDyPkE1O8bBCrU6FRkJTSgYAut5690M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
