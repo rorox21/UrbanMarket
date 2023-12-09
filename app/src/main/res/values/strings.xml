@@ -7,4 +7,6 @@
 
     <string name="descripcion">¡Explora lo Local con Urban Market!
         Descubre productos únicos y encuentra tiendas sin página web en tu área. Explora fácilmente las ubicaciones en un mapa interactivo. ¡Comienza tu experiencia de compra local hoy!</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
