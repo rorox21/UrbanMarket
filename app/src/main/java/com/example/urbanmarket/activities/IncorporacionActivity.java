@@ -12,7 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 import com.example.urbanmarket.R;
-import com.example.urbanmarket.SliderAdapter;
+import com.example.urbanmarket.adapters.SliderAdapter;
 
 public class IncorporacionActivity extends AppCompatActivity {
 
