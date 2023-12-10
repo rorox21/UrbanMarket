@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailedActivity">
+
+    <!-- ImageView para la foto -->
+    <ImageView
+        android:id="@+id/detailed_img"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- CardView para separación -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- TextView para el precio -->
+
+            <!-- TextView para la descripción -->
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView para el nombre -->
+
+    <!-- LinearLayout para detalles -->
+    <TextView
+        android:id="@+id/detailed_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre Del Producto"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_name">
+
+        <!-- LinearLayout horizontal para precio y descripción -->
+
+    </LinearLayout>
+
+    <!-- MapView para mostrar el mapa -->
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="395dp"
+        android:layout_height="437dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_price"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <TextView
+        android:id="@+id/detailed_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/detailed_name"
+        app:layout_constraintEnd_toEndOf="@+id/detailed_name"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="@+id/detailed_name"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_img"
+        app:layout_constraintVertical_bias="0.333" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
