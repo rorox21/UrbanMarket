@@ -4,16 +4,16 @@ public class CategoryModel {
 
     String img_url;
     String name;
-    String type;
+    String tipo;
 
     public CategoryModel(){
 
     }
 
-    public CategoryModel(String img_url,String name,String type) {
+    public CategoryModel(String img_url,String name,String tipo) {
         this.img_url = img_url;
         this.name = name;
-        this.type = type;
+        this.tipo = tipo;
     }
 
     public String getImg_url() {
@@ -32,12 +32,12 @@ public class CategoryModel {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
 }

@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:background="#0000FF"
             android:padding="6dp"
-            android:text="New"
+            android:text="Nuevo"
             android:textColor="@color/white"
             android:textSize="13sp"
             android:textStyle="bold"
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Product Name"
+            android:text="Nombre del producto"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,10 +58,10 @@
             app:layout_constraintTop_toBottomOf="@+id/new_product_name">
 
             <TextView
-                android:id="@+id/dollar"
+                android:id="@+id/dinero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Price: $"
+                android:text="Precio:"
                 android:textColor="#673AB7"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -78,9 +78,9 @@
                 android:textColor="#673AB7"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/dollar"
-                app:layout_constraintStart_toEndOf="@+id/dollar"
-                app:layout_constraintTop_toTopOf="@+id/dollar" />
+                app:layout_constraintBottom_toBottomOf="@+id/dinero"
+                app:layout_constraintStart_toEndOf="@+id/dinero"
+                app:layout_constraintTop_toTopOf="@+id/dinero" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

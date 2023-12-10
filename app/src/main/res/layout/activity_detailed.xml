@@ -5,9 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.DetailedActivity">
+    tools:context=".activities.DetallesActivity">
 
-    <!-- ImageView para la foto -->
     <ImageView
         android:id="@+id/detailed_img"
         android:layout_width="0dp"
@@ -18,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- CardView para separación -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
         android:layout_width="0dp"
@@ -35,16 +33,9 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <!-- TextView para el precio -->
-
-            <!-- TextView para la descripción -->
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- TextView para el nombre -->
-
-    <!-- LinearLayout para detalles -->
     <TextView
         android:id="@+id/detailed_name"
         android:layout_width="0dp"
@@ -67,11 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailed_name">
 
-        <!-- LinearLayout horizontal para precio y descripción -->
-
     </LinearLayout>
-
-    <!-- MapView para mostrar el mapa -->
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"

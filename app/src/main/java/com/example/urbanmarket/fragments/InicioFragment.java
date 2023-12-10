@@ -53,13 +53,11 @@ public class InicioFragment extends Fragment {
     FirebaseFirestore db;
 
     public InicioFragment() {
-        // Constructor vacío requerido.
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflar el diseño para este fragmento.
         View root = inflater.inflate(R.layout.fragment_inicio, container, false);
 
         db = FirebaseFirestore.getInstance();
@@ -97,14 +95,12 @@ public class InicioFragment extends Fragment {
         });
 
 
-        // Configurar el ViewPager2
         ViewPager2 viewPager = root.findViewById(R.id.view_pager);
         List<Integer> imageList = new ArrayList<>();
         imageList.add(R.drawable.banner1);
         imageList.add(R.drawable.banner2);
         imageList.add(R.drawable.banner3);
 
-        // Adaptador personalizado para el ViewPager2
         ImageSliderAdapter imageSliderAdapter = new ImageSliderAdapter(imageList);
         viewPager.setAdapter(imageSliderAdapter);
 
@@ -124,12 +120,10 @@ public class InicioFragment extends Fragment {
                                 CategoryModel categoryModel = document.toObject(CategoryModel.class);
                                 categoryModelList.add(categoryModel);
                             }
-                            // Move adapter setup here after data is loaded
                             catRecyclerview.setAdapter(categoryAdapter);
                             categoryAdapter.notifyDataSetChanged();
                         } else {
-                            // Handle the error here
-                            Log.e("Firestore Error", "Error getting documents: ", task.getException());
+                            Log.e("Firestore Error", "Error : ", task.getException());
                         }
                     }
                 });
@@ -147,15 +141,13 @@ public class InicioFragment extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
+
                                 NewProductsModel newProductsModel = document.toObject(NewProductsModel.class);
                                 newProductsModelList.add(newProductsModel);
+                                newProductsAdapter.notifyDataSetChanged();
                             }
-                            // Move adapter setup here after data is loaded
-                            newProductRecyclerview.setAdapter(newProductsAdapter);
-                            newProductsAdapter.notifyDataSetChanged();
                         } else {
-                            // Handle the error here
-                            Log.e("Firestore Error", "Error getting documents: ", task.getException());
+                            Log.e("Firestore Error", "Error : ", task.getException());
                         }
                     }
                 });
@@ -177,12 +169,10 @@ public class InicioFragment extends Fragment {
                                 PopularProductsModel popularProductsModel = document.toObject(PopularProductsModel.class);
                                 popularProductsModelList.add(popularProductsModel);
                             }
-                            // Move adapter setup here after data is loaded
                             popularRecyclerview.setAdapter(popularProductsAdapter);
                             popularProductsAdapter.notifyDataSetChanged();
                         } else {
-                            // Handle the error here
-                            Log.e("Firestore Error", "Error getting documents: ", task.getException());
+                            Log.e("Firestore Error", "Error : ", task.getException());
                         }
                     }
                 });

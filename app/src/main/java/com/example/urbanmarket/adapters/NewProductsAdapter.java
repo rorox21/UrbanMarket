@@ -1,7 +1,6 @@
 package com.example.urbanmarket.adapters;
 
-import static java.lang.reflect.Array.get;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -15,9 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.urbanmarket.R;
-import com.example.urbanmarket.activities.DetailedActivity;
+import com.example.urbanmarket.activities.DetallesActivity;
 import com.example.urbanmarket.models.NewProductsModel;
-import com.example.urbanmarket.models.PopularProductsModel;
 
 import java.util.List;
 
@@ -37,7 +35,7 @@ public class NewProductsAdapter extends RecyclerView.Adapter<NewProductsAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NewProductsAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NewProductsAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.newImg);
         holder.newName.setText(list.get(position).getName());
@@ -46,7 +44,7 @@ public class NewProductsAdapter extends RecyclerView.Adapter<NewProductsAdapter.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DetailedActivity.class);
+                Intent intent = new Intent(context, DetallesActivity.class);
                 intent.putExtra("detailed",list.get(position));
                 context.startActivity(intent);
             }

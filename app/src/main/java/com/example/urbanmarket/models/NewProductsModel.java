@@ -49,6 +49,7 @@ public class NewProductsModel implements Serializable {
     }
 
     public void setPrice(int price) {
+        this.price=price;
     }
 
     public String getImg_url() {

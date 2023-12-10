@@ -17,7 +17,6 @@ public class ImageFragment extends Fragment {
     private static final String ARG_POSITION = "position";
 
     public ImageFragment() {
-        // Constructor vacío requerido
     }
 
     public static ImageFragment newInstance(int position) {
@@ -40,7 +39,6 @@ public class ImageFragment extends Fragment {
 
         ImageView imageView = view.findViewById(R.id.image_view);
 
-        // Puedes establecer la imagen según la posición del fragmento o de otra manera
         int position = requireArguments().getInt(ARG_POSITION);
         switch (position) {
             case 0:

@@ -49,6 +49,7 @@ public class PopularProductsModel implements Serializable{
     }
 
     public void setPrice(int price) {
+        this.price = price;
     }
 
     public String getImg_url() {
@@ -58,4 +59,5 @@ public class PopularProductsModel implements Serializable{
     public void setImg_url(String img_url) {
         this.img_url = img_url;
     }
+
 }

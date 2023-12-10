@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.urbanmarket.R;
-import com.example.urbanmarket.activities.DetailedActivity;
+import com.example.urbanmarket.activities.DetallesActivity;
 import com.example.urbanmarket.models.PopularProductsModel;
 
 import java.util.List;
@@ -44,7 +44,7 @@ public class PopularProductsAdapter extends RecyclerView.Adapter<PopularProducts
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DetailedActivity.class);
+                Intent intent = new Intent(context, DetallesActivity.class);
                 intent.putExtra("detailed", popularProductsModelList.get(position));
                 context.startActivity(intent);
             }
